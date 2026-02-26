@@ -123,9 +123,19 @@ const N8N_WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL';
 
   const dots = dotsWrap.querySelectorAll('.carousel__dot');
 
+  // Set every slide to the exact pixel width of the visible track-wrap.
+  // This avoids the circular-% problem where min-width:100% on slides
+  // references the expanding track (= all slides combined), not the viewport.
+  function setSlideWidths() {
+    const w = track.parentElement.offsetWidth;
+    slides.forEach(s => { s.style.width = w + 'px'; });
+  }
+
   function goTo(index) {
     current = (index + total) % total;
-    track.style.transform = `translateX(-${current * 100}%)`;
+    // Use pixels (offsetWidth) not %, because % on translateX is relative
+    // to the element itself (the full track), not one slide width.
+    track.style.transform = `translateX(-${current * track.parentElement.offsetWidth}px)`;
     dots.forEach((d, i) => d.classList.toggle('active', i === current));
     resetTimer();
   }
@@ -152,6 +162,14 @@ const N8N_WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL';
   track.closest('.carousel')?.addEventListener('mouseenter', () => clearInterval(autoTimer));
   track.closest('.carousel')?.addEventListener('mouseleave', () => resetTimer());
 
+  // Recalculate slide widths and re-position on resize
+  window.addEventListener('resize', () => {
+    setSlideWidths();
+    goTo(current);
+  }, { passive: true });
+
+  // Initialise widths before first render
+  setSlideWidths();
   resetTimer();
 })();
 
