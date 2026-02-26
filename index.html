@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guna Fitness | Transform With Guna</title>
+  <meta name="description" content="Certified personal trainer specialising in Weight Training, Calisthenics, Fat Loss and Athletics. Book your free consultation today." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav-header" id="nav-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo">Guna Fitness</a>
+
+      <button class="nav__burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="#hero" class="nav__link">Home</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#testimonials" class="nav__link">Success Stories</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Certified Personal Trainer</p>
+          <h1 class="hero__headline">Unleash Your<br />Best Self</h1>
+          <p class="hero__sub">Transform your body with expert guidance in Weight Training, Calisthenics, Fat Loss &amp; Athletics.</p>
+          <a href="#contact" class="btn btn--primary">Book Your Consultation</a>
+        </div>
+        <div class="hero__image-wrap">
+          <img
+            src="assets/trainer-hero.jpg"
+            alt="Guna — certified personal trainer"
+            class="hero__img"
+            onerror="this.style.display='none'; this.parentElement.classList.add('hero__image-wrap--placeholder')"
+          />
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERTISE / SERVICES
+    ============================================================ -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <h2 class="section__title">My Expertise</h2>
+        <p class="section__sub">Tailored programmes built around your goals and lifestyle.</p>
+
+        <div class="expertise__grid">
+
+          <article class="expertise__card">
+            <div class="expertise__icon" aria-hidden="true">
+              <!-- Barbell SVG -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="21" width="6" height="6" rx="1.5" fill="currentColor"/>
+                <rect x="10" y="18" width="4" height="12" rx="1.5" fill="currentColor"/>
+                <rect x="14" y="23" width="20" height="2" fill="currentColor"/>
+                <rect x="34" y="18" width="4" height="12" rx="1.5" fill="currentColor"/>
+                <rect x="38" y="21" width="6" height="6" rx="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="expertise__name">Weight Training</h3>
+            <p class="expertise__desc">Build strength and muscle with progressive, science-backed resistance programmes designed for every level.</p>
+            <a href="#contact" class="expertise__link">Explore &rarr;</a>
+          </article>
+
+          <article class="expertise__card">
+            <div class="expertise__icon" aria-hidden="true">
+              <!-- Calisthenics / figure SVG -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="8" r="4" fill="currentColor"/>
+                <path d="M8 20c0-2 3-6 16-6s16 4 16 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M14 20l-4 12M34 20l4 12M18 20v12l-2 8M30 20v12l2 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="expertise__name">Calisthenics</h3>
+            <p class="expertise__desc">Master your own body weight with skill-based training that develops strength, coordination and mobility.</p>
+            <a href="#contact" class="expertise__link">Explore &rarr;</a>
+          </article>
+
+          <article class="expertise__card">
+            <div class="expertise__icon" aria-hidden="true">
+              <!-- Flame SVG -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6c0 0-10 8-10 18a10 10 0 0 0 20 0c0-4-2-8-4-10 0 4-3 6-6 6 3-6 0-14 0-14z" fill="currentColor"/>
+                <path d="M24 32a4 4 0 0 1-4-4c0-3 2-5 4-6 2 1 4 3 4 6a4 4 0 0 1-4 4z" fill="white" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3 class="expertise__name">Fat Loss</h3>
+            <p class="expertise__desc">Sustainable fat loss through intelligent training and nutrition strategies — no crash diets, just real results.</p>
+            <a href="#contact" class="expertise__link">Explore &rarr;</a>
+          </article>
+
+          <article class="expertise__card">
+            <div class="expertise__icon" aria-hidden="true">
+              <!-- Running figure SVG -->
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="8" r="4" fill="currentColor"/>
+                <path d="M22 14l6 4 4-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M28 18l-4 10-8 6M28 18l6 6-4 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 34l2 6M34 32l2 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="expertise__name">Athletics</h3>
+            <p class="expertise__desc">Improve speed, agility and athletic performance with sport-specific conditioning and explosive training.</p>
+            <a href="#contact" class="expertise__link">Explore &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT ME
+    ============================================================ -->
+    <section class="section" id="about">
+      <div class="container about__inner">
+
+        <div class="about__image-wrap">
+          <img
+            src="assets/trainer-about.jpg"
+            alt="Guna — personal trainer"
+            class="about__img"
+            onerror="this.style.display='none'; this.parentElement.classList.add('about__image-wrap--placeholder')"
+          />
+        </div>
+
+        <div class="about__content">
+          <p class="about__tag">About Me</p>
+          <h2 class="about__name">Guna <span class="text-muted">| Certified Trainer</span></h2>
+          <p class="about__tagline">Dedicated to helping you achieve your fitness goals.</p>
+          <p class="about__bio">
+            I'm a certified personal trainer with over 8 years of hands-on experience transforming bodies and mindsets. My approach combines the best of Weight Training, Calisthenics, and evidence-based nutrition to help you reach your goals — sustainably and enjoyably. Whether you're an absolute beginner or an experienced athlete, I'll meet you where you are and take you further than you thought possible.
+          </p>
+
+          <div class="about__quals">
+            <div class="qual-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+              <span>NASM-CPT</span>
+            </div>
+            <div class="qual-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Kettlebell Cert.</span>
+            </div>
+            <div class="qual-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+              <span>Sports Nutrition</span>
+            </div>
+            <div class="qual-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <span>8+ Years Exp.</span>
+            </div>
+          </div>
+
+          <div class="about__approach">
+            <h3 class="about__approach-title">My Approach</h3>
+            <ul class="about__approach-list">
+              <li>Programmes focused on compound movements and progressive overload</li>
+              <li>Nutrition guidance that fits your lifestyle — not a rigid diet plan</li>
+              <li>Weekly check-ins to track progress and adapt the programme</li>
+              <li>Mindset coaching to build the habits that last a lifetime</li>
+            </ul>
+          </div>
+
+          <a href="#contact" class="btn btn--primary">Work With Me</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SUCCESS STORIES / TESTIMONIALS
+    ============================================================ -->
+    <section class="section section--alt" id="testimonials">
+      <div class="container">
+        <h2 class="section__title">Success Stories</h2>
+        <p class="section__sub">Real people, real results — see what's possible with the right guidance.</p>
+
+        <div class="carousel" id="carousel" aria-label="Client testimonials" role="region">
+          <div class="carousel__track-wrap">
+            <ul class="carousel__track" id="carousel-track" role="list">
+
+              <!-- Slide 1 -->
+              <li class="carousel__slide" role="listitem">
+                <div class="testimonial">
+                  <div class="testimonial__photos">
+                    <figure class="testimonial__photo-pair">
+                      <div class="testimonial__before-after">
+                        <img src="assets/client-1-before.jpg" alt="Sarah M. before transformation" onerror="this.parentElement.classList.add('photo--placeholder')" />
+                        <span class="photo-label">Before</span>
+                      </div>
+                      <div class="testimonial__before-after">
+                        <img src="assets/client-1-after.jpg" alt="Sarah M. after transformation" onerror="this.parentElement.classList.add('photo--placeholder')" />
+                        <span class="photo-label">After</span>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="testimonial__content">
+                    <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                      ★★★★★
+                    </div>
+                    <blockquote class="testimonial__quote">
+                      "Working with Guna completely changed my life. I lost 15 kg in 4 months and gained more confidence than I ever thought possible. His coaching style is firm but incredibly supportive."
+                    </blockquote>
+                    <p class="testimonial__name">Sarah M.</p>
+                    <p class="testimonial__result">Lost 15 kg &mdash; now in the best shape of her life.</p>
+                    <a href="#contact" class="testimonial__case-link">View Case Study &rarr;</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 2 -->
+              <li class="carousel__slide" role="listitem">
+                <div class="testimonial">
+                  <div class="testimonial__photos">
+                    <figure class="testimonial__photo-pair">
+                      <div class="testimonial__before-after">
+                        <img src="assets/client-2-before.jpg" alt="James K. before transformation" onerror="this.parentElement.classList.add('photo--placeholder')" />
+                        <span class="photo-label">Before</span>
+                      </div>
+                      <div class="testimonial__before-after">
+                        <img src="assets/client-2-after.jpg" alt="James K. after transformation" onerror="this.parentElement.classList.add('photo--placeholder')" />
+                        <span class="photo-label">After</span>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="testimonial__content">
+                    <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                      ★★★★★
+                    </div>
+                    <blockquote class="testimonial__quote">
+                      "I came in wanting to 'get fitter' and left with an entirely new physique and athletic mindset. Guna's calisthenics programme gave me skills I never imagined I'd have at 38."
+                    </blockquote>
+                    <p class="testimonial__name">James K.</p>
+                    <p class="testimonial__result">Gained 8 kg of lean muscle and unlocked his first muscle-up.</p>
+                    <a href="#contact" class="testimonial__case-link">View Case Study &rarr;</a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Slide 3 -->
+              <li class="carousel__slide" role="listitem">
+                <div class="testimonial">
+                  <div class="testimonial__photos">
+                    <figure class="testimonial__photo-pair">
+                      <div class="testimonial__before-after">
+                        <img src="assets/client-3-before.jpg" alt="Priya R. before transformation" onerror="this.parentElement.classList.add('photo--placeholder')" />
+                        <span class="photo-label">Before</span>
+                      </div>
+                      <div class="testimonial__before-after">
+                        <img src="assets/client-3-after.jpg" alt="Priya R. after transformation" onerror="this.parentElement.classList.add('photo--placeholder')" />
+                        <span class="photo-label">After</span>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="testimonial__content">
+                    <div class="testimonial__stars" aria-label="5 out of 5 stars">
+                      ★★★★★
+                    </div>
+                    <blockquote class="testimonial__quote">
+                      "After two pregnancies I thought I'd never feel strong again. Guna proved me wrong. Six months in and I'm stronger, leaner and more energetic than I was in my twenties."
+                    </blockquote>
+                    <p class="testimonial__name">Priya R.</p>
+                    <p class="testimonial__result">Post-natal transformation — lost 12 kg and rebuilt full-body strength.</p>
+                    <a href="#contact" class="testimonial__case-link">View Case Study &rarr;</a>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <button class="carousel__btn carousel__btn--prev" id="carousel-prev" aria-label="Previous testimonial">&#8592;</button>
+          <button class="carousel__btn carousel__btn--next" id="carousel-next" aria-label="Next testimonial">&#8594;</button>
+
+          <div class="carousel__dots" id="carousel-dots" aria-label="Carousel pagination" role="tablist"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="section" id="contact">
+      <div class="container contact__inner">
+
+        <div class="contact__copy">
+          <h2 class="section__title section__title--left">Ready to Begin Your Journey?</h2>
+          <p class="contact__desc">Fill in the form and I'll get back to you within 24 hours to discuss your goals and how we can work together.</p>
+          <ul class="contact__perks">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Free initial consultation
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Personalised programme from day one
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Online &amp; in-person sessions available
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrap">
+          <h3 class="contact__form-heading">Get In Touch</h3>
+
+          <form class="contact__form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="goal">Primary Goal</label>
+              <select id="goal" name="goal" required>
+                <option value="" disabled selected>Select your goal</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Calisthenics">Calisthenics / Skill Training</option>
+                <option value="Athletics">Athletic Performance</option>
+                <option value="General Fitness">General Fitness</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about yourself and your goals…" required></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="form-submit-btn">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+
+            <div class="form-feedback" id="form-feedback" aria-live="assertive" role="alert"></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <p class="footer__logo">Guna Fitness</p>
+        <p class="footer__tagline">Transform your body. Transform your life.</p>
+        <div class="footer__socials">
+          <a href="#" class="social-link" aria-label="Instagram" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="X / Twitter" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer navigation">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul role="list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Success Stories</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact-info">
+        <h4 class="footer__heading">Contact</h4>
+        <p><a href="mailto:hello@gunafitness.com">hello@gunafitness.com</a></p>
+        <p>Available Mon – Sat, 6 am – 8 pm</p>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="footer-year"></span> Guna Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
