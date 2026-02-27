@@ -216,6 +216,7 @@
         <li><a href="#hero" class="nav__link">Home</a></li>
         <li><a href="#services" class="nav__link">Services</a></li>
         <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#certifications" class="nav__link">Certifications</a></li>
         <li><a href="#testimonials" class="nav__link">Success Stories</a></li>
         <li><a href="#faq" class="nav__link">FAQ</a></li>
         <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
@@ -418,6 +419,52 @@
           <a href="#contact" class="btn btn--primary">Work With Me</a>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CERTIFICATIONS
+    ============================================================ -->
+    <section class="section section--alt" id="certifications" aria-label="Guna's professional certifications">
+      <div class="container">
+        <h2 class="section__title">Certifications</h2>
+        <p class="section__sub">Professionally certified and continuously learning — your results are backed by proven expertise.</p>
+
+        <div class="cert__grid">
+
+          <div class="cert__card" data-src="assets/cert-1.jpeg" role="button" tabindex="0" aria-label="View certification 1">
+            <img src="assets/cert-1.jpeg" alt="NASM Certified Personal Trainer certificate" loading="lazy" />
+            <div class="cert__overlay" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              <span>View</span>
+            </div>
+          </div>
+
+          <div class="cert__card" data-src="assets/cert-2.jpeg" role="button" tabindex="0" aria-label="View certification 2">
+            <img src="assets/cert-2.jpeg" alt="Kettlebell certification certificate" loading="lazy" />
+            <div class="cert__overlay" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              <span>View</span>
+            </div>
+          </div>
+
+          <div class="cert__card" data-src="assets/cert-3.jpeg" role="button" tabindex="0" aria-label="View certification 3">
+            <img src="assets/cert-3.jpeg" alt="Sports Nutrition certification certificate" loading="lazy" />
+            <div class="cert__overlay" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              <span>View</span>
+            </div>
+          </div>
+
+          <div class="cert__card" data-src="assets/cert-4.png" role="button" tabindex="0" aria-label="View certification 4">
+            <img src="assets/cert-4.png" alt="Professional training certification certificate" loading="lazy" />
+            <div class="cert__overlay" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              <span>View</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -634,7 +681,7 @@
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about yourself and your goals…" required></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me a bit about yourself and your goals…"></textarea>
               <span class="form-error" aria-live="polite"></span>
             </div>
 
@@ -674,6 +721,7 @@
           <li><a href="#hero">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#testimonials">Success Stories</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -694,6 +742,12 @@
       <p>&copy; <span id="footer-year"></span> Transform With Guna. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Certificate lightbox -->
+  <div id="cert-lightbox" class="cert-lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <button class="cert-lightbox__close" id="cert-lightbox-close" aria-label="Close certificate viewer">&times;</button>
+    <img class="cert-lightbox__img" id="cert-lightbox-img" src="" alt="Certificate" />
+  </div>
 
   <script src="js/main.js"></script>
 </body>

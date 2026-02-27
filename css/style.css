@@ -1431,6 +1431,143 @@ button {
 }
 
 /* ============================================================
+   CERTIFICATIONS
+============================================================ */
+.cert__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cert__card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  background: var(--color-bg);
+  transition: transform var(--transition), box-shadow var(--transition);
+  aspect-ratio: 4 / 3;
+}
+
+.cert__card:hover,
+.cert__card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  outline: none;
+}
+
+.cert__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.cert__card:hover img,
+.cert__card:focus-visible img {
+  transform: scale(1.03);
+}
+
+.cert__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(90, 99, 68, 0.72);
+  color: #fff;
+  opacity: 0;
+  transition: opacity var(--transition);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cert__overlay svg {
+  width: 2rem;
+  height: 2rem;
+  stroke: #fff;
+}
+
+.cert__card:hover .cert__overlay,
+.cert__card:focus-visible .cert__overlay {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .cert__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   CERTIFICATE LIGHTBOX
+============================================================ */
+.cert-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1.5rem;
+}
+
+.cert-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cert-lightbox__img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.cert-lightbox.is-open .cert-lightbox__img {
+  transform: scale(1);
+}
+
+.cert-lightbox__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+  cursor: pointer;
+}
+
+.cert-lightbox__close:hover,
+.cert-lightbox__close:focus-visible {
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* ============================================================
    ACCESSIBILITY
 ============================================================ */
 :focus-visible {

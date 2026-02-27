@@ -6,7 +6,8 @@
  *  2. Mobile hamburger menu
  *  3. Testimonial carousel (auto-advance, dots, prev/next)
  *  4. Contact form validation + n8n webhook submission
- *  5. Footer year
+ *  5. Certificate lightbox
+ *  6. Footer year
  */
 
 /* ============================================================
@@ -14,7 +15,7 @@
 ============================================================ */
 
 // Replace with your actual n8n webhook URL when ready
-const N8N_WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL';
+const N8N_WEBHOOK_URL = 'http://localhost:5678/webhook-test/c492ddf8-6591-4847-a0f5-fe22455c191c';
 
 /* ============================================================
    1. STICKY NAV
@@ -187,7 +188,7 @@ const N8N_WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL';
     name:    { required: true, minLength: 2, label: 'Name' },
     email:   { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, label: 'Email' },
     goal:    { required: true, label: 'Goal' },
-    message: { required: true, minLength: 10, label: 'Message' },
+    message: { required: true, label: 'Message' },
   };
 
   function validateField(name, value) {
@@ -288,7 +289,57 @@ const N8N_WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL';
 })();
 
 /* ============================================================
-   6. FOOTER YEAR
+   6. CERTIFICATE LIGHTBOX
+============================================================ */
+(function initCertLightbox() {
+  const lightbox  = document.getElementById('cert-lightbox');
+  const img       = document.getElementById('cert-lightbox-img');
+  const closeBtn  = document.getElementById('cert-lightbox-close');
+  const cards     = document.querySelectorAll('.cert__card');
+  if (!lightbox || !img || !cards.length) return;
+
+  function open(src, alt) {
+    img.src = src;
+    img.alt = alt;
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function close() {
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+    // Return focus to the card that opened the lightbox
+    if (lightbox._opener) lightbox._opener.focus();
+  }
+
+  cards.forEach(card => {
+    const activate = () => {
+      lightbox._opener = card;
+      open(card.dataset.src, card.querySelector('img').alt);
+    };
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+    });
+  });
+
+  // Close on button click
+  closeBtn.addEventListener('click', close);
+
+  // Close on backdrop click (not on the image itself)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) close();
+  });
+})();
+
+/* ============================================================
+   7. FOOTER YEAR
 ============================================================ */
 (function setYear() {
   const el = document.getElementById('footer-year');
